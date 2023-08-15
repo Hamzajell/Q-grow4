@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramm</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<canvas id="meinDiagramm" width="400" height="400"></canvas>
+<script>
+    var ctx = document.getElementById('meinDiagramm').getContext('2d');
+    var meinDiagramm = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Punkt 1', 'Punkt 2'],
+            datasets: [{
+                label: 'Intensität',
+                data: [12, 19],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        }
+    });
+</script>
+</body>
+</html>
+
